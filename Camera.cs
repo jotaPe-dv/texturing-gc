@@ -3,17 +3,14 @@ using OpenTK.Mathematics;
 
 namespace ModelLoader;
 
-/// <summary>
-/// Cámara tipo FPS con movimiento libre.
-/// Basada en el tutorial de cámara de OpenTK / LearnOpenGL.
-/// </summary>
+
 public class Camera
 {
     private Vector3 _front = -Vector3.UnitZ;
     private Vector3 _up    =  Vector3.UnitY;
     private Vector3 _right =  Vector3.UnitX;
 
-    private float _pitch;   // radianes
+    private float _pitch; 
     private float _yaw = -MathHelper.PiOver2;
 
     public Vector3 Position { get; set; }

@@ -6,7 +6,6 @@ namespace ModelLoader;
 
 /// <summary>
 /// Representa un conjunto de vértices, índices y texturas listo para renderizar.
-/// Equivalente a la clase Mesh de LearnOpenGL.
 /// </summary>
 public class Mesh : IDisposable
 {
@@ -21,7 +20,7 @@ public class Mesh : IDisposable
     public struct TextureInfo
     {
         public int    Id;
-        public string Type;   // "texture_diffuse1", etc.
+        public string Type;   // "texture_diffuse1"
         public string Path;
     }
 

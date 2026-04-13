@@ -7,16 +7,9 @@ using OpenTK.Windowing.GraphicsLibraryFramework;
 
 namespace ModelLoader;
 
-/// <summary>
-/// Ventana principal OpenTK.
-/// - Carga un modelo 3D con Assimp
-/// - Aplica iluminación difusa Phong (Tutorial 2 OpenTK)
-/// - Renderiza con una única textura difusa
-/// </summary>
 public class MainWindow : GameWindow
 {
     // ── Rutas ─────────────────────────────────────────────────────────────────
-    // Cambia esta ruta por la de tu modelo .obj / .fbx / .gltf
     private const string ModelPath  = "Resources/backpack/backpack.obj";
 
     // ── Objetos OpenGL ────────────────────────────────────────────────────────
@@ -64,7 +57,6 @@ public class MainWindow : GameWindow
         _camera = new Camera(new Vector3(0f, 0f, 5f),
                              (float)ClientSize.X / ClientSize.Y);
 
-        // Ocultar cursor para modo FPS
         CursorState = CursorState.Grabbed;
     }
 
@@ -77,9 +69,8 @@ public class MainWindow : GameWindow
 
         _shader!.Use();
 
-        // Matrices MVP
+     
         var model = Matrix4.Identity;
-        // Centrar y escalar el modelo si es necesario:
         model = Matrix4.CreateScale(1f) * model;
 
         _shader.SetMatrix4("model",      model);
@@ -134,7 +125,6 @@ public class MainWindow : GameWindow
         }
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
     protected override void OnResize(ResizeEventArgs e)
     {
         base.OnResize(e);

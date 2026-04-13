@@ -9,11 +9,6 @@ using StbImageSharp;
 
 namespace ModelLoader;
 
-/// <summary>
-/// Carga un modelo 3D mediante Assimp y lo guarda como lista de Mesh.
-/// Implementa la misma lógica del tutorial LearnOpenGL/Model-Loading/Model.
-/// Solo carga texturas difusas (requisito del trabajo).
-/// </summary>
 public class Model : IDisposable
 {
     private List<Mesh>          _meshes         = new();
@@ -150,10 +145,7 @@ public class Model : IDisposable
         return result;
     }
 
-    /// <summary>
-    /// Carga una imagen con StbImageSharp y genera una textura OpenGL.
-    /// Equivalente a TextureFromFile() de LearnOpenGL.
-    /// </summary>
+
     public static int LoadTextureFromFile(string relativePath, string directory)
     {
         // Construir ruta absoluta
