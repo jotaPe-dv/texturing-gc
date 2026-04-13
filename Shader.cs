@@ -5,10 +5,6 @@ using OpenTK.Mathematics;
 
 namespace ModelLoader;
 
-/// <summary>
-/// Compila y enlaza un vertex + fragment shader.
-/// Basado en el Tutorial 2 de OpenTK (iluminación).
-/// </summary>
 public class Shader : IDisposable
 {
     public readonly int Handle;
